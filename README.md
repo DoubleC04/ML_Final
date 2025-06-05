@@ -16,7 +16,6 @@ Dự án này tập trung vào việc phát triển một hệ thống nhận di
   - **processed/**: Chứa dữ liệu đã được xử lý (ví dụ: sau khi giảm chiều, chuẩn hóa).
 - **documents/**: Chứa báo cáo chi tiết và slide thuyết trình.
 - **src/**: Chứa mã nguồn chính (ví dụ: script tiền xử lý, huấn luyện mô hình).
-- **notebooks/**: Chứa các file Jupyter Notebook để thử nghiệm và trực quan hóa.
 
 ## Nguồn dữ liệu
 Dữ liệu được lấy từ:  
@@ -25,20 +24,13 @@ Dữ liệu được lấy từ:
 ## Cách tổ chức chương trình
 - Ngôn ngữ lập trình: Python.
 - Thư viện sử dụng: `scikit-learn`, `pandas`, `numpy`, `matplotlib`, `seaborn`.
-- Chương trình được tổ chức thành các script riêng biệt trong thư mục `src/` và các notebook trong `notebooks/` để thử nghiệm.
-
+- Chương trình được tổ chức thành các script riêng biệt trong thư mục `src/`.
 ## Lưu ý
 - Thư mục `data/processed/` sẽ được cập nhật sau khi chạy các bước tiền xử lý dữ liệu.
 - Đảm bảo có quyền truy cập vào bộ dữ liệu trên Kaggle.
-- Nếu gặp lỗi bộ nhớ (MemoryError), cân nhắc giảm chiều dữ liệu bằng PCA hoặc lấy mẫu dữ liệu (20% dữ liệu).
 
 ## Góp ý và đóng góp
 - Mọi đóng góp đều được chào đón! Vui lòng tạo pull request hoặc issue trên repository này.
 - Báo cáo lỗi hoặc đề xuất cải tiến qua phần Issues.
 
 ---
-
-### Lưu ý
-- File `README.md` được viết dựa trên giả định rằng repository `ML_Final` chứa mã nguồn cho dự án ASL Handsign Recognition. Nếu nội dung thực tế khác, hãy cung cấp thêm thông tin để tôi điều chỉnh.
-- Thay thế "[Mã SV]" bằng mã số sinh viên thực tế.
-- Nếu cần bổ sung hoặc chỉnh sửa thêm, hãy cho tôi biết!
