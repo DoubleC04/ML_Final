@@ -1,33 +1,44 @@
 # Dự án Nhận diện Ký hiệu Tay ASL (ASL Handsign Recognition)
 
 ## Mô tả dự án
-Dự án này tập trung vào việc xây dựng một hệ thống nhận diện ký hiệu tay dựa trên bộ dữ liệu **ASL Handsign Dataset (Grayscaled & Thresholded)**. Dữ liệu được tải từ Kaggle và sẽ được xử lý để sử dụng trong các mô hình học máy.
+Dự án này tập trung vào việc phát triển một hệ thống nhận diện ký hiệu tay dựa trên bộ dữ liệu **ASL Handsign Dataset (Grayscaled & Thresholded)**, được tải từ Kaggle. Mục tiêu là áp dụng các thuật toán học máy như K Nearest Neighbor, KMeans, Logistic Regression, Naive Bayes, DBScan, và giảm chiều PCA để phân loại các ký hiệu tay theo ngôn ngữ ký hiệu Mỹ (ASL). Đây là bài tập lớn cho môn học Machine Learning tại trường đại học.
+
+## Thông tin thành viên nhóm
+| STT | Họ và Tên         | Mã sinh viên | Công việc phụ trách                                      |
+|-----|-------------------|--------------|---------------------------------------------------------|
+| 1   | Đỗ Hữu Đạt        | [22000080]      | Nghiên cứu và tổng hợp kiến thức về thuật toán K Nearest Neighbor, KMeans, giảm chiều PCA. |
+| 2   | Đỗ Tiến Dũng      | [22000075]      | Nghiên cứu và tổng hợp kiến thức về thuật toán Logistic Regression, chuẩn hóa dữ liệu. |
+| 3   | Nguyễn Vĩ Chí Cường | [22000073]      | Nghiên cứu và tổng hợp kiến thức về thuật toán Naive Bayes, DBScan, tiền xử lý và trực quan hóa dữ liệu. |
 
 ## Cấu trúc thư mục
-- **data/**: Thư mục chứa dữ liệu của dự án.
-  - **raw/**: Chứa dữ liệu thô được tải từ [ASL Handsign Dataset trên Kaggle](https://www.kaggle.com/datasets/furkanakdeniz/asl-handsign-dataset-grayscaled-thresholded/data).
-  - **processed/**: Chứa dữ liệu sau khi được xử lý (hiện tại đang rỗng, sẽ được cập nhật sau khi xử lý dữ liệu thô).
-- **documents/**: Chứa các tài liệu liên quan đến dự án.
-  - Báo cáo chi tiết.
-  - Slide thuyết trình.
+- **data/**:
+  - **raw/**: Chứa dữ liệu thô từ Kaggle (ASL Handsign Dataset).
+  - **processed/**: Chứa dữ liệu đã được xử lý (ví dụ: sau khi giảm chiều, chuẩn hóa).
+- **documents/**: Chứa báo cáo chi tiết và slide thuyết trình.
+- **src/**: Chứa mã nguồn chính (ví dụ: script tiền xử lý, huấn luyện mô hình).
+- **notebooks/**: Chứa các file Jupyter Notebook để thử nghiệm và trực quan hóa.
 
 ## Nguồn dữ liệu
-Dữ liệu thô được lấy từ:  
-[ASL Handsign Dataset (Grayscaled & Thresholded)](https://www.kaggle.com/datasets/furkanakdeniz/asl-handsign-dataset-grayscaled-thresholded/data) trên Kaggle.
+Dữ liệu được lấy từ:  
+[ASL Handsign Dataset (Grayscaled & Thresholded)](https://www.kaggle.com/datasets/furkanakdeniz/asl-handsign-dataset-grayscaled-thresholded/data).
 
-## Hướng dẫn sử dụng
-1. **Tải dữ liệu**: Dữ liệu thô đã được tải và lưu trong `data/raw/`.
-2. **Xử lý dữ liệu**: Dữ liệu sau khi xử lý sẽ được lưu trong `data/processed/`.
-3. **Tài liệu tham khảo**: Xem báo cáo và slide trong thư mục `documents/` để biết thêm chi tiết về dự án.
+## Cách tổ chức chương trình
+- Ngôn ngữ lập trình: Python.
+- Thư viện sử dụng: `scikit-learn`, `pandas`, `numpy`, `matplotlib`, `seaborn`.
+- Chương trình được tổ chức thành các script riêng biệt trong thư mục `src/` và các notebook trong `notebooks/` để thử nghiệm.
 
 ## Lưu ý
-- Thư mục `data/processed/` hiện đang rỗng và sẽ được cập nhật sau khi hoàn thành bước xử lý dữ liệu.
-- Đảm bảo bạn có quyền truy cập vào dữ liệu trên Kaggle trước khi sử dụng.
+- Thư mục `data/processed/` sẽ được cập nhật sau khi chạy các bước tiền xử lý dữ liệu.
+- Đảm bảo có quyền truy cập vào bộ dữ liệu trên Kaggle.
+- Nếu gặp lỗi bộ nhớ (MemoryError), cân nhắc giảm chiều dữ liệu bằng PCA hoặc lấy mẫu dữ liệu (20% dữ liệu).
 
+## Góp ý và đóng góp
+- Mọi đóng góp đều được chào đón! Vui lòng tạo pull request hoặc issue trên repository này.
+- Báo cáo lỗi hoặc đề xuất cải tiến qua phần Issues.
 
+---
 
-
-
-
-
-
+### Lưu ý
+- File `README.md` được viết dựa trên giả định rằng repository `ML_Final` chứa mã nguồn cho dự án ASL Handsign Recognition. Nếu nội dung thực tế khác, hãy cung cấp thêm thông tin để tôi điều chỉnh.
+- Thay thế "[Mã SV]" bằng mã số sinh viên thực tế.
+- Nếu cần bổ sung hoặc chỉnh sửa thêm, hãy cho tôi biết!
